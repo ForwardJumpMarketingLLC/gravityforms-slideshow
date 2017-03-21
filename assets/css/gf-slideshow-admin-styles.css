@@ -1,0 +1,22 @@
+select.cmb2_select {
+    max-width: 100% !important;
+}
+
+.cmb-td.ajaxing {
+    position: relative;
+}
+
+.cmb-td.ajaxing select {
+    visibility: hidden;
+}
+
+.cmb-td.ajaxing::before {
+    content: " ";
+    width: 30px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    background: url('/wp-includes/js/tinymce/skins/lightgray/img/loader.gif');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
