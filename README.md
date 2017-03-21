@@ -1,5 +1,5 @@
 # Gravity Forms Slideshow
-This plugin allows users to contribute to an image slideshow by uploading pictures through a Gravity Forms form. Images that are uploaded (and approved) can be displayed as a [Slick Slider](https://kenwheeler.github.io/slick/) slideshow using the provided shortcode.
+This plugin allows users to contribute to an image slideshow by uploading pictures through a Gravity Forms form. Images that are uploaded (and approved) can be displayed as a [Slick Slider](https://kenwheeler.github.io/slick/) slideshow using the provided shortcode.  The slideshow also has lightbox functionality using [Slick Lightbox](https://github.com/mreq/slick-lightbox). 
 
 ## Requirements
 PHP version 5.3+
