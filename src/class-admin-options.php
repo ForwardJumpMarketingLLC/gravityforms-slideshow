@@ -201,7 +201,7 @@ class Admin_Options {
 			'type'    => __( 'select', 'gf-slideshow' ),
 			'classes' => __( 'form-id-select', 'gf-slideshow' ),
 //			'desc'    => 'Enter the ID of the Gravity Form.',
-			'default' => null,
+			'default' => 'null',
 			'options' => $this->get_forms()
 		) );
 

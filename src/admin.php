@@ -35,11 +35,11 @@ function get_form_fields( $field ) {
 
 	$forms = cmb2_get_option( 'gf_slideshow_options', '_gf_image_upload_form' );
 
-	if ( empty( $forms[ $field->group->index ]['form_id'] ) ) {
+	$form_id = $forms[ $field->group->index ]['form_id'];
+
+	if ( 'null' == $form_id || null == $form_id ) {
 		return false;
 	}
-
-	$form_id = $forms[ $field->group->index ]['form_id'];
 
 	$form = \GFFormsModel::get_form_meta( $form_id );
 
