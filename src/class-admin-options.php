@@ -42,7 +42,7 @@ class Admin_Options {
 	 *
 	 * @var string
 	 */
-	protected $description = '<p>This plugin allows users to contribute to an image slideshow by uploading pictures using a Gravity Forms form.  User uploaded pictures are added to the Media Library and can be used just like any other media file.</p><p>The first step is to create a form that has a "File Upload" field.  Next, complete the form below in order to tell the plugin which forms and fields to use for the file uploads.  Then copy the slideshow shortcode and paste it wherever you want the user-based slideshow to appear.</p><p>Image uploads will not be visible in the slideshow until they are marked as approved.  To mark a file as approved, click on the image edit link in the media library and select "Yes" in the "Approve user upload" box.  You can also include image edit links in the Gravity Forms notification by adding the tag <code>{image_edit_links}</code> to the form notification message.</p>';
+	protected $description = '<p>This plugin allows users to contribute to an image slideshow by uploading pictures using a Gravity Forms form.  User uploaded pictures are added to the Media Library and can be used just like any other media file.</p><p>The first step is to create a form that has a "File Upload" field.  Next, complete the form below in order to tell the plugin which forms and fields to use for the file uploads.  Then copy the slideshow shortcode and paste it wherever you want the user-based slideshow to appear.</p><p>Image uploads will not be visible in the slideshow until they are marked as approved.  To approve images, go to the image/attachment edit screen and select "Yes" in the "Approve user upload" metabox.  Note, if you don\'t see the metabox, click on "Edit more details" link to bring you to the image edit screen.  <p>You can also include image edit links in the Gravity Forms notification by adding the tag <code>{image_edit_links}</code> to the form notification message.</p>';
 
 	/**
 	 * Options Page hook
@@ -231,7 +231,6 @@ class Admin_Options {
 			'default'    => '[gf-slideshow gform_id="{form_id}"]',
 			'attributes' => array(
 				'readonly' => 'readonly',
-				'disabled' => 'disabled',
 			),
 		) );
 	}

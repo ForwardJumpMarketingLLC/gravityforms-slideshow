@@ -26,7 +26,9 @@ An example usage is
 ```
 
 ### Approving Images
-By default only images that are marked as approved will appear in the slideshow.  To approve images, go to the image edit screen and select "Yes" in the "Approve user upload" metabox.  Image edit links can be included in Gravity Forms notification emails by adding the merge tag `{image_edit_links}`.
+By default only images that are marked as approved will appear in the slideshow.  To approve images, go to the image/attachment edit screen and select "Yes" in the "Approve user upload" metabox.  Note, if you don't see the metabox, click on "Edit more details" link to bring you to the image edit screen.
+
+Image edit links can be included in Gravity Forms notification emails by adding the merge tag `{image_edit_links}`.
 
 ## Hooks and overrides
 - Filters:
