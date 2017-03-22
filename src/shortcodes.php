@@ -22,14 +22,19 @@ function image_slider( $atts ) {
 
 	$atts = shortcode_atts(
 		array(
-			'gform_id'        => '',
+			'gform_id'        => null,
 			'image_size'      => 'large',
+			'max_slides'      => - 1,
 			'show_unapproved' => false,
 			'show_captions'   => false,
 			'slider_syncing'  => false,
 		),
 		$atts,
 		'gf-slideshow' );
+
+	if ( ! $atts['gform_id'] ) {
+		return false;
+	}
 
 	$show_approved = $atts['show_unapproved'] ? array( 0, 1 ) : array( 1 );
 
@@ -38,7 +43,7 @@ function image_slider( $atts ) {
 		'orderby'        => 'ID',
 		'post_status'    => 'inherit',
 		'post_type'      => 'attachment',
-		'posts_per_page' => - 1,
+		'posts_per_page' => esc_sql( $atts['max_slides'] ),
 		'meta_query'     => array(
 			array(
 				'key'     => '_gf_slideshow_form_source',
@@ -81,6 +86,7 @@ function image_slider( $atts ) {
  * @param string $image_size     The size image to show in the slideshow.  Must be a registered image size.
  * @param bool   $show_captions  Whether or not the slides should include captions.
  * @param bool   $slider_syncing Display the slider in Slider Syncing format.
+ *
  * @see http://kenwheeler.github.io/slick/
  */
 function do_slider_slides( $attachments, $image_size, $show_captions, $slider_syncing ) {
