@@ -273,13 +273,13 @@
     width: 30px;
 }
 
-/*.slick-slider .slick-prev {*/
-    /*left: -30px;*/
-/*}*/
+.slick-prev {
+    left: -30px;
+}
 
-/*.slick-slider .slick-next {*/
-    /*right: -30px;*/
-/*}*/
+.slick-next {
+    right: -30px;
+}
 
 .slick-slider .slick-prev:before,
 .slick-slider .slick-next:before {

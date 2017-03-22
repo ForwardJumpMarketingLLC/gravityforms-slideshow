@@ -15,10 +15,10 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_styles' );
  */
 function enqueue_styles() {
 
-	wp_enqueue_style( 'gf-slideshow-styles', FJ_GRAVITYFORMS_SLIDESHOW_URL . 'assets/css/gf-slideshow-styles.min.css', array(), FJ_GRAVITYFORMS_SLIDESHOW_VERSION );
-
 	wp_enqueue_style( 'slick-theme-css', '//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css' );
 
+	wp_enqueue_style( 'gf-slideshow-styles', FJ_GRAVITYFORMS_SLIDESHOW_URL . 'assets/css/gf-slideshow-styles.min.css', array(), FJ_GRAVITYFORMS_SLIDESHOW_VERSION );
+	
 }
 
 add_action( 'gf_slideshow_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts' );
