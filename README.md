@@ -16,13 +16,14 @@ Use the settings page form to map the image and caption fields of the Gravity fo
 ### Shortcode
 The slideshow is rendered using a shortcode.  Copy the shortcode found on the settings page and paste it where you want the slideshow to appear.  You can pass several arguments in order to customize the display:
 - gform_id: The ID of the Gravity form that is being used to generate the slideshow.
-- show_captions: Default is false.  You can enable captions on slides by passing` show_captions="true"`.  See below for a full example.
-- slider_syncing: See https://kenwheeler.github.io/slick/ for an example of slider syncing. Default is false. You can enable slider syncing by passing `slider_syncing="true"`.  See below for a full example.
-- show_unapproved: By default all images must be approved before they will appear in the slideshow.  You can bypass this by passing `show_unapproved="true"`.  See below for a full example.
+- max_slides: Default is unlimited.  You can limit the number of slides (say, 10) by passing `max_slides=10`.
+- show_captions: Default is false.  You can enable captions on slides by passing `show_captions="true"`.
+- slider_syncing: See https://kenwheeler.github.io/slick/ for an example of slider syncing. Default is false. You can enable slider syncing by passing `slider_syncing="true"`.
+- show_unapproved: By default all images must be approved before they will appear in the slideshow.  You can bypass this by passing `show_unapproved="true"`.
 
-An example usage is 
+Here is an example shortcode with all of the options specified.  Remember, `gform_id` is the only required parameter: 
 ```
-[gf-slideshow gform_id="1" show_captions="true" slider_syncing="true" show_unapproved="true"]
+[gf-slideshow gform_id="1" max_slides=10 show_captions="true" slider_syncing="true" show_unapproved="true"]
 ```
 
 ### Approving Images
