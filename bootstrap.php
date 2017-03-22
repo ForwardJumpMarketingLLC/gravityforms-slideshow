@@ -3,14 +3,14 @@
  * Plugin Name:       Gravity Forms Slideshow
  * Description:       Allows users to contribute to a slideshow by uploading pictures through Gravity Forms form. User uploaded pictures are added to the Media Library and can be used just like any other media file.
  *
- * GitHub Plugin URI: https://github.com/timothyjensen/gravityforms-slideshow
+ * GitHub Plugin URI: https://github.com/ForwardJumpMarketingLLC/GravityForms-slideshow
  * GitHub Branch:     master
  * Author:            Tim Jensen
  * Author URI:        https://forwardjump.com
  * Text Domain:       gf-slideshow
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Version:           1.1.1
+ * Version:           1.2.0
  */
 
 namespace ForwardJump\GravityFormsSlideshow;
