@@ -211,7 +211,7 @@ class Admin_Options {
 //			'desc'       => 'Choose the "File Upload" field.',
 			'type'       => 'select',
 			'classes'    => 'image-id-select',
-			'options_cb' => '\ForwardJump\GravityFormsSlideshow\Admin\get_form_fields'
+			'options_cb' => array( $this, 'get_form_fields' ),
 		) );
 
 		$cmb->add_group_field( $group_id, array(
@@ -220,7 +220,7 @@ class Admin_Options {
 //			'desc'       => 'Choose the "Caption" field.',
 			'type'       => 'select',
 			'classes'    => 'caption-id-select',
-			'options_cb' => '\ForwardJump\GravityFormsSlideshow\Admin\get_form_fields'
+			'options_cb' => array( $this, 'get_form_fields' ),
 		) );
 
 		$cmb->add_group_field( $group_id, array(
@@ -284,5 +284,32 @@ class Admin_Options {
 		}
 
 		return $forms_list;
+	}
+
+	/**
+	 * Get the GF fields from the selected form
+	 *
+	 * @param $field    CMB2 field
+	 *
+	 * @return array|bool
+	 */
+	public function get_form_fields( $field ) {
+
+		$forms = cmb2_get_option( 'gf_slideshow_options', '_gf_image_upload_form' );
+
+		$form_id = $forms[ $field->group->index ]['form_id'];
+
+		if ( 'null' == $form_id || null == $form_id ) {
+			return false;
+		}
+
+		$form = \GFFormsModel::get_form_meta( $form_id );
+
+		$fields_list = [ 'null' => 'None selected' ];
+		foreach ( $form['fields'] as $field ) {
+			$fields_list[ $field->id ] = $field->label;
+		}
+
+		return $fields_list;
 	}
 }
